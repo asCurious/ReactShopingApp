@@ -5,7 +5,7 @@ const App = (props)=>{
     return(
         <div>
             <Layout>
-                <p>this is test</p>
+                <p>این یک متن تست است.</p>
             </Layout>
         </div>
     )
