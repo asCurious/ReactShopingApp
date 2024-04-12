@@ -3,7 +3,7 @@ import "./builder.css"
 
 const Builder = (props)=>{
     return(
-        <div>
+        <div className="builder">
             <div>{props.title}</div>
             <button>Add</button>
             <button>Remove</button>
