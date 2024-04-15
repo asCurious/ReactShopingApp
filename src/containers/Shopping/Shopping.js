@@ -2,6 +2,12 @@ import React , {useState} from "react";
 import Wrapper from "../../hoc/wrapper";
 import Controls from "../../Controls/Controls.css/Controls";
 
+const prices = {
+    product1: 10000,
+    product2: 15000,
+    product3: 30000,
+    product4: 45000,
+}
 const Shopping = (props)=>{
     const [state, setState] = useState({
       products: {
