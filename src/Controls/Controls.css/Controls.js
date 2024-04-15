@@ -11,7 +11,7 @@ const Controls = (props)=>{
     ]
     return(
         <div className="controls">
-            <div>
+            <div className="price">
                 <p>قیمت نهایی: {props.price}</p>
             </div>
             {products.map((item)=>{
