@@ -11,6 +11,9 @@ const Controls = (props)=>{
     ]
     return(
         <div className="controls">
+            <div>
+                <p>قیمت نهایی: {props.price}</p>
+            </div>
             {products.map((item)=>{
                 return <Builder 
                 key={item.title} 
