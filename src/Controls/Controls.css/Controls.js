@@ -7,7 +7,7 @@ const Controls = (props)=>{
         {title: "محصول1" , type: "product1"},
         {title: "محصول2" , type: "product2"},
         {title: "محصول3" , type: "product3"},
-        {title: "محصول4ض" , type: "product4"},
+        {title: "محصول4" , type: "product4"},
     ]
     return(
         <div className="controls">
