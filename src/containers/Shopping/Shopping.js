@@ -19,7 +19,7 @@ const Shopping = (props)=>{
       totalPrice: 0,
     });
 
-    const addProductHandler = (type) => {
+    const addProductHandler = (type)=> {
       const prevCount = state.products[type];
       const updatedCount = prevCount + 1;
       const updatedProducts = {
@@ -31,9 +31,24 @@ const Shopping = (props)=>{
       const newPrice = prevPrice + priceAdd;
       setState({ totalPrice: newPrice, products: updatedProducts });
     };
+    const removeProductHandler = (type)=>{
+        const prevCount = state.products[type];
+        const updatedCount = prevCount - 1;
+        const updatedProducts = {
+          ...state.products
+        };
+        updatedProducts[type] = updatedCount;
+        const priceSub = prices[type];
+        const prevPrice = state.totalPrice;
+        const newPrice = prevPrice - priceSub;
+        setState({ totalPrice: newPrice, products: updatedProducts });
+    }
     return(
         <Wrapper>
-            <Controls productAdd={addProductHandler} />
+            <Controls 
+            productAdd={addProductHandler}
+            productRemove={removeProductHandler}
+            />
         </Wrapper>
     )
 }
