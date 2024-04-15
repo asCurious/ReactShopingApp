@@ -22,6 +22,7 @@ const Controls = (props)=>{
                 remove= {()=> props.productRemove(item.type)}
                 />
             })}
+            <button className="order-btn">سفارش</button>
             
         </div>
     )
