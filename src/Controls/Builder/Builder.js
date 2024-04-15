@@ -1,12 +1,12 @@
 import React from "react";
-import "./builder.css"
+import "./Builder.css"
 
 const Builder = (props)=>{
     return(
         <div className="builder">
             <div>{props.title}</div>
-            <button>Add</button>
-            <button>Remove</button>
+            <button>اضافه</button>
+            <button>حذف</button>
         </div>
     )
 }
