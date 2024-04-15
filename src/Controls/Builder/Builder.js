@@ -5,7 +5,7 @@ const Builder = (props)=>{
     return(
         <div className="builder">
             <div>{props.title}</div>
-            <button>اضافه</button>
+            <button onClick={props.add}>اضافه</button>
             <button>حذف</button>
         </div>
     )

@@ -33,7 +33,7 @@ const Shopping = (props)=>{
     };
     return(
         <Wrapper>
-            <Controls />
+            <Controls productAdd={addProductHandler} />
         </Wrapper>
     )
 }
