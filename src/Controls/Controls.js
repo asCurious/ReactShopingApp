@@ -1,5 +1,6 @@
 import React from "react";
 import "./Controls.css"
+import Builder from "./Builder/Builder";
 
 const Controls = (props)=>{
     const products = [
@@ -10,6 +11,9 @@ const Controls = (props)=>{
     ]
     return(
         <div className="controls">
+            {products.map((item)=>{
+                return <Builder key={item.title} title={item.title} />
+            })}
             
         </div>
     )
