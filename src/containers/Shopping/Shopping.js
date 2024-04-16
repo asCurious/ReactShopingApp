@@ -1,6 +1,7 @@
 import React , {useState} from "react";
 import Wrapper from "../../hoc/wrapper";
 import Controls from "../../Controls/Controls.css/Controls";
+import Modal from "../../components/UI/Modal/Modal";
 
 const prices = {
     product1: 10000,
@@ -45,6 +46,7 @@ const Shopping = (props)=>{
     }
     return(
         <Wrapper>
+          <Modal />
             <Controls 
             productAdd={addProductHandler}
             productRemove={removeProductHandler}
