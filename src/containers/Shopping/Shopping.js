@@ -47,7 +47,6 @@ const Shopping = (props)=>{
         setState({ totalPrice: newPrice, products: updatedProducts });
     }
     const purchasedHandler = ()=>{
-      console.log("purshased: true")
       setState(prevState => ({ ...prevState, purchased: true }));
     }
     const modalCloseHandler = ()=>{
