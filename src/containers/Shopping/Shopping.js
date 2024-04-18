@@ -50,9 +50,12 @@ const Shopping = (props)=>{
       console.log("purshased: true")
       setState(prevState => ({ ...prevState, purchased: true }));
     }
+    const modalCloseHandler = ()=>{
+      setState(prevState => ({ ...prevState, purchased: false }));
+    }
     return(
         <Wrapper>
-          <Modal show={state.purchased}>
+          <Modal show={state.purchased} modalClose={modalCloseHandler}>
             <Order products={state.products} />
           </Modal>
             <Controls 
