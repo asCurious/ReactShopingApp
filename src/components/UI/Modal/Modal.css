@@ -7,10 +7,10 @@
     border-radius: 5px;
     padding: 16px;
     left: 38%;
-    top: 25%;
+    top: 15%;
     box-sizing: border-box;
     text-align: center;
-    transition: all 0.3 ease-out;
+    transition: all 1s ease-out;
 }
 @media (max-width: 60rem){
     .modal{
