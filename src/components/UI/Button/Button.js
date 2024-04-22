@@ -2,9 +2,9 @@ import React from "react";
 import "./Button.css"
 
 const Button = (props)=>{
-    <Button className={`btn ${props.btnType}`} onClick={props.click}>
+    <button className="btn" onClick={props.click}>
         {props.children}
-    </Button>
+    </button>
 }
 
 export default Button;
