@@ -15,8 +15,8 @@ const Order = (props) =>{
             <h3>سفارش</h3>
             <ul>{summery}</ul>
             <p>مایل به ادامه خرید هستید؟</p>
-            <button btnType="success">بله</button>
-            <button btnType="danger">خیر</button>
+            <Button btnType="success">بله</Button>
+            <Button btnType="danger">خیر</Button>
         </Wrapper>
     )
 }
