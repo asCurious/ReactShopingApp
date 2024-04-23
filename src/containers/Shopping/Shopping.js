@@ -59,6 +59,7 @@ const Shopping = (props)=>{
         <Wrapper>
           <Modal show={state.purchased} modalClose={modalCloseHandler}>
             <Order products={state.products} 
+            price={state.totalPrice}
             continue={purchasedContinueHandler}
             cancel={modalCloseHandler}
             />
