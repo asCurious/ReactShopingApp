@@ -8,6 +8,7 @@
     width: 5rem;
     margin: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .success{

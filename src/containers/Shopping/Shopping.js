@@ -52,10 +52,16 @@ const Shopping = (props)=>{
     const modalCloseHandler = ()=>{
       setState(prevState => ({ ...prevState, purchased: false }));
     }
+    const purchasedContinueHandler = ()=>{
+      console.log("purchasedContinueHandler")
+    }
     return(
         <Wrapper>
           <Modal show={state.purchased} modalClose={modalCloseHandler}>
-            <Order products={state.products} />
+            <Order products={state.products} 
+            continue={purchasedContinueHandler}
+            cancel={modalCloseHandler}
+            />
           </Modal>
             <Controls 
             productAdd={addProductHandler}
