@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 import Wrapper from "../../hoc/wrapper";
-import Controls from "../../Controls/Controls.css/Controls";
+import Controls from "../../Controls/Controls/Controls";
 import Modal from "../../components/UI/Modal/Modal";
 import Order from "../../components/Order/Order";
 
