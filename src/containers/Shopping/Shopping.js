@@ -4,6 +4,7 @@ import Controls from "../../Controls/Controls/Controls";
 import Modal from "../../components/UI/Modal/Modal";
 import Order from "../../components/Order/Order";
 import axios from "../../axios-orders";
+import Loader from "../../components/UI/Loader/Loader";
 
 const prices = {
     product1: 10000,
@@ -76,6 +77,7 @@ const Shopping = (props)=>{
             continue={purchasedContinueHandler}
             cancel={modalCloseHandler}
             />
+            <Loader />
           </Modal>
             <Controls 
             productAdd={addProductHandler}
