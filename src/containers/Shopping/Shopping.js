@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React , {useRef, useState} from "react";
 import Wrapper from "../../hoc/wrapper";
 import Controls from "../../Controls/Controls/Controls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -22,7 +22,10 @@ const Shopping = (props)=>{
       },
       totalPrice: 0,
       purchased: false,
+      loading: false,
     });
+    const stateRef=useRef();
+    stateRef.current=state;
 
     const addProductHandler = (type)=> {
       const prevCount = state.products[type];
@@ -55,6 +58,7 @@ const Shopping = (props)=>{
       setState(prevState => ({ ...prevState, purchased: false }));
     }
     const purchasedContinueHandler = ()=>{
+      setState({loading: true})
       const order = {
         products: state.products,
         totalPrice: state.totalPrice,
@@ -64,20 +68,25 @@ const Shopping = (props)=>{
         }
       }
       axios.post("/orders.json", order).then((response)=>{
-        console.log(response)
+        setState({...state,loading: false , purchased: false})
       }).catch((error)=>{
-        console.log(error)
+        setState({...state,loading: false , purchased: false})
       })
+    }
+    let order = 
+    <Order 
+    products={stateRef.current.products} 
+    price={state.totalPrice}
+    continue={purchasedContinueHandler}
+    cancel={modalCloseHandler}
+    />
+    if (state.loading){
+      order = <Loader />
     }
     return(
         <Wrapper>
           <Modal show={state.purchased} modalClose={modalCloseHandler}>
-            <Order products={state.products} 
-            price={state.totalPrice}
-            continue={purchasedContinueHandler}
-            cancel={modalCloseHandler}
-            />
-            <Loader />
+            {order}
           </Modal>
             <Controls 
             productAdd={addProductHandler}
